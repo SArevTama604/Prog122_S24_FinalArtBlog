@@ -1,0 +1,69 @@
+﻿<Window
+    x:Class="Prog122_S24_FinalArtBlog.AddArtPieceWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Prog122_S24_FinalArtBlog"
+    mc:Ignorable="d"
+    Title="Add Art Piece Window"
+    Height="400"
+    Width="600">
+    <Canvas>
+        <StackPanel
+            Canvas.Left="50"
+            Canvas.Top="20">
+            <TextBox
+                Name="nameTextBox"
+                Text="Volkswagen"
+                Width="200"
+                TextChanged="nameTextBox_TextChanged" />
+            <TextBox
+                Name="artistTextBox"
+                Text="Golf R"
+                Width="200" />
+            <RichTextBox
+                Name="bodyRichTextBox"
+                Height="100"
+                Width="200" />
+            <ComboBox
+                Name="yearComboBox"
+                Width="200"
+                SelectionChanged="yearComboBox_SelectionChanged">
+                <ComboBoxItem
+                    Content="2023" />
+                <ComboBoxItem
+                    Content="2024" />
+            </ComboBox>
+            <Button
+                Name="selectImageButton"
+                Content="Select Image"
+                Click="SelectImageButton_Click"
+                Width="100" />
+            <Image
+                Name="selectedImage"
+                Height="100"
+                Width="200" />
+            <StackPanel
+                Orientation="Horizontal">
+                <RadioButton
+                    Name="abstractRadioButton"
+                    Content="Abstract" />
+                <RadioButton
+                    Name="realismRadioButton"
+                    Content="Realism" />
+                <RadioButton
+                    Name="impressionismRadioButton"
+                    Content="Impressionism" />
+                <RadioButton
+                    Name="surrealismRadioButton"
+                    Content="Surrealism" />
+            </StackPanel>
+            <Button
+                Name="addButton"
+                Content="Add"
+                Click="AddButton_Click"
+                Width="100" />
+        </StackPanel>
+    </Canvas>
+</Window>
